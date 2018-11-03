@@ -1,32 +1,19 @@
-const Discord = require('discord.js'const Discord = require('discord.js');
+const Discord = require('discord.js'const Discord = require('discord.js')const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
 var prefix = "/";
 
-const ytdl = require('ytdl-core');
-
-const queue = new Map();
-
-var serveurs = {};
 
 bot.login("NTAxNDg4NDgxMTY0NDYwMDMy.DrYC3w.xwtRAZe1kRz_AC7yjyPM8pTs5uI");
 
-function play(connection, message) {
-    var server = servers[message.guild.id];
-
-    server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter :"audioonly"}));
-
-    server.queue.shift();
-
-    server.dispatcher.on("end", function() {
-        if (server.queue[0]) play(connection, message);
-
-        else connection.disconnect();
-    });
-}
-
 bot.on("ready", () => {
+  console.log("Je suis prêt")
+  
+bot.user.setActivity("/help I CS®『🚫』13 servs", {type:"STREAMING"});    
+});
+Un séjour sans faille
+bot . on ( "prêt" , () => {
   console.log("Je suis prêt")
   
 bot.user.setActivity("/help I CS®『🚫』13 servs", {type:"STREAMING"});    
